@@ -27,7 +27,7 @@ below:
 \begin{align}
 \hat{y} =
     & -0.74(\textrm{age}) + 1.2(\textrm{WG}) - 0.014(\textrm{age}^2) -
-    0.00073(\textrm{WG}^2) +
+    0.00073(\textrm{WG}^2) + \\
     & 0.0074(\textrm{age}^3) +
     (4.9 \times{} 10^{-6})(\textrm{WG}^3) + \\
     0.012(\textrm{age})(\textrm{WG}) -
