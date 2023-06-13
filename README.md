@@ -23,18 +23,26 @@ below:
 
 ### Age model
 
-$$ \hat{y} = -0.74(\textrm{age}) + 1.2(\textrm{WG}) - 0.014(\textrm{age}^2) -
+```math
+\hat{y} = -0.74(\textrm{age}) + 1.2(\textrm{WG}) - 0.014(\textrm{age}^2) -
     0.00073(\textrm{WG}^2) + 0.0074(\textrm{age}^3) +
     (4.9 \times{} 10^{-6})(\textrm{WG}^3) +
     0.012(\textrm{age})(\textrm{WG}) - \\
     (5.2 \times{} 10^{-6})(\textrm{age}^2)(\textrm{WG}^2) +
-    (7.0 \times{} 10^{-10})(\textrm{age}^3)(\textrm{WG}^3) $$
+    (7.0 \times{} 10^{-10})(\textrm{age}^3)(\textrm{WG}^3)
+```
+### No age model
+
+```math
+\hat{y} = 1.2(\textrm{WG}) - (6.9\times10^{-4})(\textrm{WG}^2) +
+    (4.99\times10^{-6})(\textrm{WG}^3)
+```
 
 
 # References
 
 Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
-    Pethick, S. J. (1994). "*"Variability in Early Cognitive Development."
+    Pethick, S. J. (1994). "Variability in Early Cognitive Development."
     *Monographs of the Society for Research in Child Development*, 59(5).
 
 Howell, B. R., Styner, M. A., Gao, W., Yap, P.-T., Wang, L., Baluyot, K.,
