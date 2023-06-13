@@ -4,4 +4,6 @@
 .httr-oauth
 .DS_Store
 
+# Only track .rda files in data/
 data/**.csv
+data/**.rds

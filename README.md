@@ -44,6 +44,9 @@ below:
 ```
 # Category scores
 
+Because fourteen items are not in the same category between WG and WS, in
+order to calculate WS category scores, the entire list of items is needed
+
 # References
 
  1. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
