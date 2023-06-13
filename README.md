@@ -15,7 +15,9 @@ for comparison with studies of intellectual and developmental disabilities.
 
 # Functions
 
-## wg2ws_total_age()
+## Total Score
+
+`wg2ws_total_age()`
 
 This function converts a total WG score (i.e., 0-396) to WS based on either
 WG total score alone or including the effect of age. The models are listed
@@ -40,15 +42,15 @@ below:
 \hat{y} = 1.2(\textrm{WG}) - (6.9\times10^{-4})(\textrm{WG}^2) +
     (4.99\times10^{-6})(\textrm{WG}^3)
 ```
-
+# Category scores
 
 # References
 
-Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
+ 1. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
     Pethick, S. J. (1994). "Variability in Early Cognitive Development."
     *Monographs of the Society for Research in Child Development*, 59(5).
 
-Howell, B. R., Styner, M. A., Gao, W., Yap, P.-T., Wang, L., Baluyot, K.,
+ 2. Howell, B. R., Styner, M. A., Gao, W., Yap, P.-T., Wang, L., Baluyot, K.,
     Yacoub, E., Chen, G., Potts, T., Salzwedel, A., Li, G., Gilmore, J. H.,
     Piven, J., Smith, J. K., Shen, D., Ugurbil, K., Zhu, H., Lin, W., &
     Elison, J. T. (2018).

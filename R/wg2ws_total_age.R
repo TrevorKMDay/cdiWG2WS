@@ -16,6 +16,8 @@
 #' # A score of 250 known to be collected out of range, but without an age
 #' wg2ws_total_age(250)
 #' 331
+#'
+#' @export
 
 wg2ws_total_age <- function(WG, age = NA) {
 

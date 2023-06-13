@@ -1,19 +1,79 @@
-wg2ws_items <- function(items, error_on_missing = TRUE) {
+#' Title
+#'
+#' @param items List of WG items present for individual
+#' @param error_on_missing If TRUE, check whether all items are actual WG items
+#' @param in_inside "In" and "inside" appear as two items on WG, but one
+#'  ("inside/in") on WS. If "either," treat "inside/in" as endorsed if either
+#'  appears. For "in" or "inside", treat "inside/in" as endorsed based on
+#'  the presence of the indicated item.
+#'
+#' @return A data frame with 22 rows indicating item totals for all WS
+#'  categories.
+#' @export
+#'
+#' @examples
+#'
+#' items <- c("woof woof", "candy", "cry", "sheep", "pattycake", "lamp", "hi")
+#' wg2ws_items(items)
+#'
+#'        category n
+#' 1 action_words 3
+#' 2      animals 0
+#' 3   body_parts 0
+#'              ...
 
+wg2ws_items <- function(items, error_on_missing = TRUE, in_inside = "either") {
+
+  if (!(in_inside %in% c("either", "in", "inside"))) {
+    stop("Parameter in_inside must be one of: either, in, inside")
+  }
+
+  # Load data
   data("g_dict")
+  data("s_dict")
+
+  s_dict$category <- as.factor(s_dict$category)
+
+  # Get list of WS categories
+  categories <- unique(s_dict$category)
+
+  # Check for bad items =======================================================
 
   items_not_in_dict <- items[!(items %in% g_dict$item_definition)]
 
   if (length(items_not_in_dict) > 0 & error_on_missing) {
     stop(paste0("Items ``", paste(items_not_in_dict, collapse = ", "),
                "'' not in gestures dictionary!"))
-  } else {
+  }
 
-    locs <- match(items, g_dict$item_definition)
-    category <- g_dict$category[locs]
+  # Fix in/inside depending on setting ========================================
+
+  # Depending on the setting, append the "inside/in" to the data frame for
+  # calculating WS score
+  if (in_inside == "either" & ("in" %in% items | "inside" %in% items) |
+      in_inside == "in" & "in" %in% items |
+      in_inside == "inside" & "inside" %in% items) {
+
+    items <- append(items, "inside/in")
 
   }
 
-  return(category)
+  # Remove in/inside for clarity
+  items <- items[!(items %in% c("in", "inside"))]
+
+  # Create table of results ===================================================
+
+  items_df <- data.frame(item_definition = items)
+  items_df <- merge(items_df, s_dict)
+
+  categories_tbl <- as.data.frame(table(items_df$category),
+                                  responseName = "n",
+                                  stringsAsFactors = FALSE)
+
+  colnames(categories_tbl)[1] <- "category"
+
+  # ===========================================================================
+
+  return(categories_tbl)
 
 }
