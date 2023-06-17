@@ -5,8 +5,8 @@
 #'  items. See helper function `wg2ws_list_items`
 #' @param in_inside "In" and "inside" appear as two items on WG, but one
 #'  ("inside/in") on WS. If "either," treat "inside/in" as endorsed if either
-#'  appears. For "in" or "inside", treat "inside/in" as endorsed based on
-#'  the presence of the indicated item.
+#'  appears. For "both", both must be endorsed. For "in" or "inside", treat
+#'  "inside/in" as endorsed based solely on the presence of the indicated item.
 #'
 #' @return A data frame with 22 rows indicating item totals for all WS
 #'  categories.
@@ -52,6 +52,7 @@ wg2ws_items <- function(items, error_on_missing = TRUE, in_inside = "either") {
   # Depending on the setting, append the "inside/in" to the data frame for
   # calculating WS score
   if (in_inside == "either" & ("in" %in% items | "inside" %in% items) |
+      in_inside == "both" & ("in" %in% items & "inside" %in% items) |
       in_inside == "in" & "in" %in% items |
       in_inside == "inside" & "inside" %in% items) {
 

@@ -45,7 +45,19 @@ below:
 # Category scores
 
 Because fourteen items are not in the same category between WG and WS, in
-order to calculate WS category scores, the entire list of items is needed
+order to calculate WS category scores, the entire list of items is needed.
+
+## WG items to WS categories
+
+`wg2ws_items.R`
+
+This function takes a vector of items (in Wordbank format), which includes
+entires like `fish (food)` and `fish (animal)` and returns WS category totals
+(i.e., remaps them).
+
+# Helper functions
+
+ - `wg2ws_list_items(instrument = c("WG", "WS"))`: List items on WG or WS.
 
 # References
 
