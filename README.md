@@ -55,6 +55,37 @@ This function takes a vector of items (in Wordbank format), which includes
 entires like `fish (food)` and `fish (animal)` and returns WS category totals
 (i.e., remaps them).
 
+Note that `in` and `inside` appear as two distinct items on WG, but one item
+(`inside/in`) on WS. Thus, you can choose how to score it.
+
+ - `"either"` (**default**): If either is endorsed, treat `inside/in` as
+    endorsed.
+ - `"both"`: Both must be endorsed to treat `inside/in` as endorsed.
+ - `"in"`: Only `in` has to be endorsed to treat `inside/in` as endorsed.
+ - `"inside"`: As above, but with `inside`.
+
+## Categories to WS
+
+`wg2ws_category_score.R`
+
+Converts the WG total scores (calculated above) to WS scores using a set of
+models.
+
+## in/inside
+
+Because some models include total WG score, and
+because information is not kept on how `inside/in` was chosen to be endorsed,
+there is technically a minor discrepancy between true WG score and its mapping
+to WS (which is the value used for prediction), of up to one word.
+
+In random simulations, with 3,297 faux inventories, 1,408 (43%) had a one-item
+discrepancy in the *predicted result*. Because the predicted result is out of
+680, we consider this fairly minor, and provide a parameter to override the
+WG score used in modeling with the true WG score from the original instrument.
+
+The correlation between the values predicted with the true WG score and
+the remapped, and thus off-by-one values was $r=0.9999872$.
+
 # Helper functions
 
  - `wg2ws_list_items(instrument = c("WG", "WS"))`: List items on WG or WS.
