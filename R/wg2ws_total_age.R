@@ -43,12 +43,17 @@ wg2ws_total_age <- function(WG, age = NA) {
 
   } else if (age < 8) {
 
-    message("Age is below normed range, returning input")
+    message("Age is below normed range (<8 months), returning input unchanged.")
     return(WG)
+
+  } else if (age > 40) {
+
+    message("Age is greater than 40 months, not performing projection.")
+    return(NA)
 
   } else {
 
-    message("Age is within normed range, returning input")
+    message("Age is within normed range (8-18 months), returning input unchanged.")
     return(WG)
 
   }

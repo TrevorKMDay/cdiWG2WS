@@ -1,9 +1,13 @@
 #' Title
 #'
-#' @param age Age in months.
-#' @param wg_table
-#' @param verbose
-#' @param WG_total
+#' @param age (Optional). Age in months. If unset, models not including age
+#'          are used
+#' @param wg_table A 22-row table with the columns `category` and `n`.
+#' @param verbose T/F: Be verbose.
+#' @param WG_total NA/numeric:
+#'                  In the case of `in/inside`, the WG score model can be
+#'                  off-by-one. Out of so many items, this is negligible, but
+#'                  can be set explicitly here.
 #'
 #' @return
 #' @export
@@ -78,7 +82,7 @@ wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
   maximums <- max_value$max[wg_to_max]
   if (verbose) {
     bad <- sum(new_value > maximums, na.rm = TRUE)
-    message(paste("Found", bad, "values in excess"))
+    message(paste("Found", bad, "values in excess of category maximum"))
   }
   new_value <- ifelse(new_value > maximums, maximums, new_value)
 
@@ -106,7 +110,13 @@ wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
                            sounds = sounds, time_words = twords, toys = toys)
 
   # Round and truncate to [0, 6]
-  cw_new <- round(predict(cw_stripped, cw_new_data))
+
+  if (!is.na(age))
+    cw_new <- round(predict(cw_stripped, cw_new_data))
+  else
+    cw_new <- round(predict(cw_noage_stripped, cw_new_data))
+
+  # Truncate to possible range
   cw_new <- ifelse(cw_new > 6, 6, ifelse(cw_new < 0, 0, cw_new))
 
   if (verbose) message(paste("Connecting words:", cw_new))

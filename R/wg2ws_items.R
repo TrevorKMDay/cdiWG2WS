@@ -1,15 +1,16 @@
-#' Title
+#' wg2ws_items
 #'
 #' @param items List of WG items present for individual.
 #' @param error_on_missing If TRUE, check whether all items are actual WG
-#'  items. See helper function `wg2ws_list_items`
+#'  items. See helper function `wg2ws_list_items()`.
 #' @param in_inside "In" and "inside" appear as two items on WG, but one
 #'  ("inside/in") on WS. If "either," treat "inside/in" as endorsed if either
 #'  appears. For "both", both must be endorsed. For "in" or "inside", treat
 #'  "inside/in" as endorsed based solely on the presence of the indicated item.
 #'
 #' @return A data frame with 22 rows indicating item totals for all WS
-#'  categories.
+#'  categories. These values are *not* adjusted, and need to be adjusted with
+#'  `wg2ws_category_score()`.
 #' @export
 #'
 #' @examples
