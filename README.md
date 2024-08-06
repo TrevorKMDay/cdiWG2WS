@@ -13,7 +13,8 @@ This was done in order to adapt scores collected as part of the Baby Connectome
 Project (BCP; Howell et al., 2018), which collected WG scores out of range
 for comparison with studies of intellectual and developmental disabilities.
 
-For more information, see the preprint (Day et al., 2024).
+For more information, see the
+[preprint](https://osf.io/preprints/psyarxiv/rwhcy) (Day et al., 2024).
 
 # Functions
 
@@ -51,7 +52,7 @@ below:
 # Category scores
 
 Because 14 items are not in the same category between WG and WS, in
-order to calculate WS category scores, the entire list of items is needed.
+order to calculate WS category scores, **the entire list of items is needed**.
 
 Those 14 items are (WG -> WS):
 
@@ -62,12 +63,12 @@ Those 14 items are (WG -> WS):
 
 Thus the flow looks something like:
 
-   child_wg_words <- c("moo", "home", "run")
+    child_wg_words <- c("moo", "home", "run")
 
-   child_wg2ws <- wg2ws_items(child_wg_words) # returns a 22x2 data frame
+    child_wg2ws <- wg2ws_items(child_wg_words) # returns a 22x2 data frame
 
-   \# Returns a 22x2 data frame
-   child_ws_cat_scores <- wg2ws_category_score(child_wg2ws)
+    \# Returns a 22x2 data frame
+    child_ws_cat_scores <- wg2ws_category_score(child_wg2ws)
 
 There is no need to estimate category scores if you don't need them, but the
 new simulated WS score could be found as `sum(child_ws_cat_scores$n)`.
@@ -91,11 +92,11 @@ combined item (`inside/in`) on WS. Thus, you can choose how to score it.
 
 Example:
 
-   items <- c("beach", "radio", "her", "penguin", "see", "tiger", "party", "in")
+    items <- c("beach", "radio", "her", "penguin", "see", "tiger", "party", "in")
 
-   wg2ws_items(items, in_inside = "either")
+    wg2ws_items(items, in_inside = "either")
 
-               category n
+                category n
     1       action_words 1
     2            animals 2
     3         body_parts 0
@@ -153,7 +154,7 @@ and the best available model will be used.
     test_result_36mo <- wg2ws_category_score(test_table, age = 36, verbose = TRUE)
 
     > head(test_result_noage)
-                category  n new_value
+               category  n new_value
     1      action_words 56        98
     2           animals 35        41
     3        body_parts 19        23
@@ -162,16 +163,13 @@ and the best available model will be used.
     6 descriptive_words 37        62
 
     > head(test_result_30mo)
-                category  n new_value
+               category  n new_value
     1      action_words 54        98
     2           animals 35        41
     3        body_parts 18        24
     4          clothing 18        25
     5  connecting_words  0         5
     6 descriptive_words 35        60
-
-    test_result_36mo <- wg2ws_category_score(test_table, age = 36,
-                                                verbose = TRUE)
 
     > head(test_result_36mo)
                 category  n new_value
