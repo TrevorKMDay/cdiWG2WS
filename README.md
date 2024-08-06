@@ -96,28 +96,28 @@ Example:
    wg2ws_items(items, in_inside = "either")
 
                category n
-   1       action_words 1
-   2            animals 2
-   3         body_parts 0
-   4           clothing 0
-   5   connecting_words 0
-   6  descriptive_words 0
-   7         food_drink 0
-   8    furniture_rooms 0
-   9     games_routines 0
-   10     helping_verbs 0
-   11         household 1
-   12         locations 1
-   13           outside 0
-   14            people 0
-   15            places 2
-   16          pronouns 1
-   17       quantifiers 0
-   18    question_words 0
-   19            sounds 0
-   20        time_words 0
-   21              toys 0
-   22          vehicles 0
+    1       action_words 1
+    2            animals 2
+    3         body_parts 0
+    4           clothing 0
+    5   connecting_words 0
+    6  descriptive_words 0
+    7         food_drink 0
+    8    furniture_rooms 0
+    9     games_routines 0
+    10     helping_verbs 0
+    11         household 1
+    12         locations 1
+    13           outside 0
+    14            people 0
+    15            places 2
+    16          pronouns 1
+    17       quantifiers 0
+    18    question_words 0
+    19            sounds 0
+    20        time_words 0
+    21              toys 0
+    22          vehicles 0
 
 ## Categories to WS
 
@@ -143,44 +143,44 @@ WG score used in modeling with the true WG score from the original instrument.
 The function lets you model age and WG total score, either can be excluded,
 and the best available model will be used.
 
-   random <- sample(wg2ws_list_items("WG"), 380)
-   c("in", "inside") %in% random
+    random <- sample(wg2ws_list_items("WG"), 380)
+    c("in", "inside") %in% random
 
-   test_table <- wg2ws_items(random)
+    test_table <- wg2ws_items(random)
 
-   test_result_noage <- wg2ws_category_score(test_table, age = NA, verbose = TRUE)
-   test_result_30mo <- wg2ws_category_score(test_table, age = 30, verbose = TRUE)
-   test_result_36mo <- wg2ws_category_score(test_table, age = 36, verbose = TRUE)
+    test_result_noage <- wg2ws_category_score(test_table, age = NA, verbose = TRUE)
+    test_result_30mo <- wg2ws_category_score(test_table, age = 30, verbose = TRUE)
+    test_result_36mo <- wg2ws_category_score(test_table, age = 36, verbose = TRUE)
 
-   > head(test_result_noage)
-            category  n new_value
-   1      action_words 56        98
-   2           animals 35        41
-   3        body_parts 19        23
-   4          clothing 18        24
-   5  connecting_words  0         4
-   6 descriptive_words 37        62
+    > head(test_result_noage)
+                category  n new_value
+    1      action_words 56        98
+    2           animals 35        41
+    3        body_parts 19        23
+    4          clothing 18        24
+    5  connecting_words  0         4
+    6 descriptive_words 37        62
 
-   > head(test_result_30mo)
-              category  n new_value
-   1      action_words 54        98
-   2           animals 35        41
-   3        body_parts 18        24
-   4          clothing 18        25
-   5  connecting_words  0         5
-   6 descriptive_words 35        60
+    > head(test_result_30mo)
+                category  n new_value
+    1      action_words 54        98
+    2           animals 35        41
+    3        body_parts 18        24
+    4          clothing 18        25
+    5  connecting_words  0         5
+    6 descriptive_words 35        60
 
-   test_result_36mo <- wg2ws_category_score(test_table, age = 36,
-                                             verbose = TRUE)
+    test_result_36mo <- wg2ws_category_score(test_table, age = 36,
+                                                verbose = TRUE)
 
-   > head(test_result_36mo)
-              category  n new_value
-   1      action_words 54       101
-   2           animals 35        41
-   3        body_parts 18        25
-   4          clothing 18        26
-   5  connecting_words  0         6
-   6 descriptive_words 35        63
+    > head(test_result_36mo)
+                category  n new_value
+    1      action_words 54       101
+    2           animals 35        41
+    3        body_parts 18        25
+    4          clothing 18        26
+    5  connecting_words  0         6
+    6 descriptive_words 35        63
 
 # Helper functions
 
@@ -192,20 +192,20 @@ and the best available model will be used.
 # References
 
  1. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
-      Pethick, S. J. (1994). "Variability in Early Cognitive Development."
-      *Monographs of the Society for Research in Child Development*, 59(5).
+    Pethick, S. J. (1994). "Variability in Early Cognitive Development."
+    *Monographs of the Society for Research in Child Development*, 59(5).
 
  2. Howell, B. R., ... Elison, J. T. (2018).
-      "The UNC/UMN Baby Connectome Project (BCP): An overview of the study
-      design and protocol development." *NeuroImage*.
-      https://doi.org/10.1016/j.neuroimage.2018.03.049
+    "The UNC/UMN Baby Connectome Project (BCP): An overview of the study
+    design and protocol development." *NeuroImage*.
+    https://doi.org/10.1016/j.neuroimage.2018.03.049
 
  3. Day, T. K. M., Borovsky, A., Thal, D., & Elison, J. T. (2024).
-      "The CDI in two longitudinal datasets: Methods and differences across
-       decades." *PsyArXiV*.
-      https://osf.io/preprints/psyarxiv/rwhcy
+    "The CDI in two longitudinal datasets: Methods and differences across
+    decades." *PsyArXiV*.
+    https://osf.io/preprints/psyarxiv/rwhcy
 
  4. Day, T. K. M., & Elison, J. T. (2021).
-      "A broadened estimate of syntactic and lexical ability from the MB-CDI."
-      *Journal of Child Language*, 1–18.
-      https://doi.org/10.1017/S0305000921000283
+    "A broadened estimate of syntactic and lexical ability from the MB-CDI."
+    *Journal of Child Language*, 1–18.
+    https://doi.org/10.1017/S0305000921000283
