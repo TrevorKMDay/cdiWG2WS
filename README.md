@@ -183,9 +183,12 @@ and the best available model will be used.
 # Helper functions
 
  - `wg2ws_list_items(instrument = c("WG", "WS"))`: List items on WG or WS.
+ - `wg2ws_get_cat_function(the_category, age)`: Returns the function to do the
+        projection, or with `echo_only = TRUE`, returns the coefficients in a
+        human-readable format.
  - `wg2ws_summarize_cat(category_scores)`: Take a table from
-      `wg2ws_category_score` and summarize the results into a total score, and
-      a lexical/syntactic score (Day & Elison, 2021).
+        `wg2ws_category_score` and summarize the results into a total score,
+        and a lexical/syntactic score (Day & Elison, 2021).
 
 # References
 

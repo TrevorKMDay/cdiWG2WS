@@ -1,18 +1,18 @@
-#' Title
+#' Simulate WS category score from given WG score
 #'
+#' @param wg_table A 22-row table with the columns `category` and `n`.
 #' @param age (Optional). Age in months. If unset, models not including age
 #'          are used
-#' @param wg_table A 22-row table with the columns `category` and `n`.
 #' @param verbose T/F: Be verbose.
 #' @param WG_total NA/numeric:
 #'                  In the case of `in/inside`, the WG score model can be
 #'                  off-by-one. Out of so many items, this is negligible, but
 #'                  can be set explicitly here.
 #'
-#' @return
+#' @return New score (integer)
 #' @export
 #'
-#' @examples
+#' @examples wg2ws_category_score(scores, age = 20)
 
 wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
                                  verbose = FALSE) {
@@ -52,13 +52,9 @@ wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
     if (the_category == "connecting_words")
       next
 
-    # message(the_category)
-    model_index <- which(cat_models_stripped$category == the_category)
-    if (is.na(age))
-      model <- cat_models_stripped$lm1[[model_index]]
-    else
-      model <- cat_models_stripped$lm4[[model_index]]
-
+    # Get model. 'age' parameter for this function is T/F, so if age is NA,
+    # convert that to FALSE.
+    model <- wg2ws_get_cat_function(the_category, !is.na(age))
 
     # Do model prediction
     new_data = data.frame(cat_total_WG = the_score, age_c = age_c,
