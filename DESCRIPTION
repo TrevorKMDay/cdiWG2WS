@@ -1,14 +1,15 @@
 Package: cdiWG2WS
 Title: Words and Gestures to Words and Sentences Score Conversion
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R:
-    person("Day", "Trevor", , "day00096@umn.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-2911-8312"))
+    person("Day", "Trevor", ,
+            c("day00096@umn.edu", "trevor.day@georgetown.edu"),
+            role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0003-2911-8312"))
 Description: This package takes Words and Gestures scores (total and lexical
     category) and converts them to would-be scores on Words and Sentences,
     based on modeling from the Stanford Wordbnak.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
