@@ -13,16 +13,19 @@
 #'  `wg2ws_category_score()`.
 #' @export
 #'
+#' @importFrom utils data
+#' @importFrom usethis use_data_raw
+#'
 #' @examples
 #'
 #' items <- c("woof woof", "candy", "cry", "sheep", "pattycake", "lamp", "hi")
 #' wg2ws_items(items)
 #'
-#'        category n
-#' 1 action_words 3
-#' 2      animals 0
-#' 3   body_parts 0
-#'              ...
+#' #       category n
+#' # 1 action_words 3
+#' # 2      animals 0
+#' # 3   body_parts 0
+#' #              ...
 
 wg2ws_items <- function(items, error_on_missing = TRUE, in_inside = "either") {
 
@@ -31,8 +34,8 @@ wg2ws_items <- function(items, error_on_missing = TRUE, in_inside = "either") {
   }
 
   # Load data
-  data("g_dict")
-  data("s_dict")
+  use_data_raw("g_dict")
+  use_data_raw("s_dict")
 
   s_dict$category <- as.factor(s_dict$category)
 

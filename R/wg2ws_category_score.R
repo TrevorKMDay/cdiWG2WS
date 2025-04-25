@@ -12,7 +12,7 @@
 #' @return New score (integer)
 #' @export
 #'
-#' @examples wg2ws_category_score(scores, age = 20)
+#' @importFrom stats predict
 
 wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
                                  verbose = FALSE) {

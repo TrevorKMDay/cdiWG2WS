@@ -19,14 +19,3 @@ values below 0 or greater than 680.
 \description{
 wg2ws_total_age
 }
-\examples{
-
-# A 24-month old with 250 words
-wg2ws_total_age(250, 24)
-330
-
-# A score of 250 known to be collected out of range, but without an age
-wg2ws_total_age(250)
-331
-
-}

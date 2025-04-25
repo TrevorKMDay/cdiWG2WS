@@ -3,15 +3,18 @@
 #' @param instrument "WG" or "WS"
 #'
 #' @return List of items
+#'
+#' @importFrom usethis use_data_raw
+#'
 #' @export
 
 wg2ws_list_items <- function(instrument) {
 
   if (instrument == "WG") {
-    data("g_dict")
+    use_data_raw("g_dict")
     return(g_dict$item_definition)
   } else if (instrument == "WS") {
-    data("s_dict")
+    use_data_raw("s_dict")
     return(s_dict$item_definition)
   }
 

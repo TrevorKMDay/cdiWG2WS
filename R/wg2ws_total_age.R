@@ -7,15 +7,7 @@
 #' @return Adjusted score, rounded to the nearest integer. Does not return
 #'  values below 0 or greater than 680.
 #'
-#' @examples
-#'
-#' # A 24-month old with 250 words
-#' wg2ws_total_age(250, 24)
-#' 330
-#'
-#' # A score of 250 known to be collected out of range, but without an age
-#' wg2ws_total_age(250)
-#' 331
+#' @importFrom usethis use_data_raw
 #'
 #' @export
 
@@ -27,10 +19,10 @@ wg2ws_total_age <- function(WG, age = NA) {
     newdata$age_c <- age - 18
 
     if (is.na(age)) {
-      data("total_wg2ws_noage_model")
+      use_data_raw("total_wg2ws_noage_model")
       y_hat <- predict(total_wg2ws_noage_model, newdata)
     }  else {
-      data("total_wg2ws_model")
+      use_data_raw("total_wg2ws_model")
       y_hat <- predict(total_wg2ws_model, newdata)
     }
 

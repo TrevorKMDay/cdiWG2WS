@@ -2,35 +2,37 @@
 % Please edit documentation in R/wg2ws_items.R
 \name{wg2ws_items}
 \alias{wg2ws_items}
-\title{Title}
+\title{wg2ws_items}
 \usage{
 wg2ws_items(items, error_on_missing = TRUE, in_inside = "either")
 }
 \arguments{
-\item{items}{List of WG items present for individual}
+\item{items}{List of WG items present for individual.}
 
-\item{error_on_missing}{If TRUE, check whether all items are actual WG items}
+\item{error_on_missing}{If TRUE, check whether all items are actual WG
+items. See helper function \code{wg2ws_list_items()}.}
 
 \item{in_inside}{"In" and "inside" appear as two items on WG, but one
 ("inside/in") on WS. If "either," treat "inside/in" as endorsed if either
-appears. For "in" or "inside", treat "inside/in" as endorsed based on
-the presence of the indicated item.}
+appears. For "both", both must be endorsed. For "in" or "inside", treat
+"inside/in" as endorsed based solely on the presence of the indicated item.}
 }
 \value{
 A data frame with 22 rows indicating item totals for all WS
-categories.
+categories. These values are \emph{not} adjusted, and need to be adjusted with
+\code{wg2ws_category_score()}.
 }
 \description{
-Title
+wg2ws_items
 }
 \examples{
 
 items <- c("woof woof", "candy", "cry", "sheep", "pattycake", "lamp", "hi")
 wg2ws_items(items)
 
-       category n
-1 action_words 3
-2      animals 0
-3   body_parts 0
-             ...
+#       category n
+# 1 action_words 3
+# 2      animals 0
+# 3   body_parts 0
+#              ...
 }

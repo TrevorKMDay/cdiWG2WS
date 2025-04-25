@@ -1,6 +1,7 @@
 #' Get function for category/age combination
 #'
-#' @param category Which category to use, following Wordbank naming convention.
+#' @param the_category Which category to use, following Wordbank naming
+#'    convention.
 #'  Options: sounds, animals, vehicles, toys, food_drink, clothing, body_parts,
 #'            household, furniture_rooms, outside, places, people,
 #'            games_routines, action_words, descriptive_words, time_words,
@@ -9,6 +10,8 @@
 #' @param age T/F. If TRUE, return model that uses age as predictor.
 #' @param echo_only T/F. If FALSE, returns model as function; if TRUE echoes
 #'    as human readable.
+#'
+#' @importFrom stats coef
 #'
 #' @return Function or NULL
 #' @export
