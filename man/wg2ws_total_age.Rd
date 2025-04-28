@@ -2,7 +2,7 @@
 % Please edit documentation in R/wg2ws_total_age.R
 \name{wg2ws_total_age}
 \alias{wg2ws_total_age}
-\title{wg2ws_total_age}
+\title{Calculate WS total score from WG score.}
 \usage{
 wg2ws_total_age(WG, age = NA)
 }
@@ -17,5 +17,15 @@ Adjusted score, rounded to the nearest integer. Does not return
 values below 0 or greater than 680.
 }
 \description{
-wg2ws_total_age
+Calculate WS total score from WG score.
+}
+\details{
+Given a single number (WG total score) and optionally age, calculate a WG
+score.
+}
+\examples{
+
+wg2ws_total_age(200)
+wg2ws_total_age(200, age = 17)
+
 }

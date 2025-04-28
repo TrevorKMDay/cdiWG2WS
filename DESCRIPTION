@@ -3,8 +3,8 @@ Title: Words and Gestures to Words and Sentences Score Conversion
 Version: 0.1.0
 Authors@R:
     person(given = c("Trevor", "K.M."), family = "Day",
-            email = c("trevor.day@georgetown.edu", "day00096@umn.edu"),
-            role = "cre",
+            email = "trevor.day@georgetown.edu", 
+            role = c("cre", "aut"),
             comment = c(ORCID = "0000-0003-2911-8312"))
 Description: Convert CDI Words and Gestures scores to would-be scores on Words
     and Sentences, based on modeling from the Stanford Wordbank.
@@ -16,3 +16,6 @@ Depends:
     R (>= 3.5.0),
     usethis (>= 3.1.0)
 LazyData: true
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

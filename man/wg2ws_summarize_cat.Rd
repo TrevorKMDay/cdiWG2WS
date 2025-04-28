@@ -16,3 +16,20 @@ scores
 \description{
 Summarize category table
 }
+\details{
+Given a 22x2 category table, calculate total scores and lexical and
+syntax scores.
+}
+\examples{
+
+words <- c("smile", "old", "chicken (animal)", "breakfast", "snow", "uh oh",
+           "please", "bad", "bicycle", "moon")
+
+categories <- wg2ws_items(words)
+scores <- wg2ws_summarize_cat(categories)
+}
+\references{
+Day, T. K. M., & Elison, J. T. (2021). A broadened estimate of syntactic
+and lexical ability from the MB-CDI. \emph{Journal of Child Language},
+49(3), 615–632. https://doi.org/10.1017/S0305000921000283
+}

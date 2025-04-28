@@ -1,4 +1,9 @@
-#' wg2ws_total_age
+#' Calculate WS total score from WG score.
+#'
+#' @details
+#' Given a single number (WG total score) and optionally age, calculate a WG
+#' score.
+#'
 #'
 #' @param WG Words and Gestures total score.
 #' @param age Age in months (optional). A different, more accurate model is
@@ -10,8 +15,15 @@
 #' @importFrom usethis use_data_raw
 #'
 #' @export
+#'
+#' @examples
+#'
+#' wg2ws_total_age(200)
+#' wg2ws_total_age(200, age = 17)
+#'
 
 wg2ws_total_age <- function(WG, age = NA) {
+
 
   if (age > 18 | is.na(age)) {
 
@@ -19,11 +31,11 @@ wg2ws_total_age <- function(WG, age = NA) {
     newdata$age_c <- age - 18
 
     if (is.na(age)) {
-      use_data_raw("total_wg2ws_noage_model")
-      y_hat <- predict(total_wg2ws_noage_model, newdata)
+      use_data_raw("total_WG_to_WS_noage_stripped")
+      y_hat <- predict(total_WG_to_WS_noage_stripped, newdata)
     }  else {
-      use_data_raw("total_wg2ws_model")
-      y_hat <- predict(total_wg2ws_model, newdata)
+      use_data_raw("total_WG_to_WS_stripped")
+      y_hat <- predict(total_WG_to_WS_stripped, newdata)
     }
 
     # Cutoff at 0/680

@@ -1,5 +1,13 @@
 #' Get function for category/age combination
 #'
+#' @description
+#'  Returns a model object to predict category score given category and age.
+#'
+#' @details
+#'  This is mostly an internal function, but is exposed in case somebody needs
+#'  it. Returns a `lm()` object that has had the embedded data stripped, given
+#'  a category and whether to model age.
+#'
 #' @param the_category Which category to use, following Wordbank naming
 #'    convention.
 #'  Options: sounds, animals, vehicles, toys, food_drink, clothing, body_parts,
@@ -15,8 +23,11 @@
 #'
 #' @return Function or NULL
 #' @export
+#'
+#' @examples wg2ws_get_cat_function("time_words", age = TRUE)
 
-wg2ws_get_cat_function <- function(the_category, age, echo_only = FALSE) {
+wg2ws_get_cat_function <- function(the_category, age = TRUE,
+                                   echo_only = FALSE) {
 
   valid_cats <- c("animals", "vehicles", "toys", "food_drink", "clothing",
                   "body_parts", "household", "furniture_rooms", "outside",

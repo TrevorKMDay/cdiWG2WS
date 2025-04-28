@@ -4,7 +4,7 @@
 \alias{wg2ws_get_cat_function}
 \title{Get function for category/age combination}
 \usage{
-wg2ws_get_cat_function(the_category, age, echo_only = FALSE)
+wg2ws_get_cat_function(the_category, age = TRUE, echo_only = FALSE)
 }
 \arguments{
 \item{the_category}{Which category to use, following Wordbank naming
@@ -24,5 +24,13 @@ as human readable.}
 Function or NULL
 }
 \description{
-Get function for category/age combination
+Returns a model object to predict category score given category and age.
+}
+\details{
+This is mostly an internal function, but is exposed in case somebody needs
+it. Returns a \code{lm()} object that has had the embedded data stripped, given
+a category and whether to model age.
+}
+\examples{
+wg2ws_get_cat_function("time_words", age = TRUE)
 }

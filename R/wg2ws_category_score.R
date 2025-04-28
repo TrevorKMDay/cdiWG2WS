@@ -1,6 +1,16 @@
 #' Simulate WS category score from given WG score
 #'
-#' @param wg_table A 22-row table with the columns `category` and `n`.
+#' @description
+#' `wg2ws_category_score` takes 22 WG scores and simulates WS scores for each
+#'  one.
+#'
+#' @details
+#'  This function predicts simulated WS scores for each category score
+#'  independently. If an age is not supplied, models not using age are used
+#'  (less accurate than including age).
+#'
+#' @param wg_table A 22-row table with the columns `category` and `n`. Includes
+#'  Sounds and Connecting Words.
 #' @param age (Optional). Age in months. If unset, models not including age
 #'          are used
 #' @param verbose T/F: Be verbose.
@@ -9,10 +19,26 @@
 #'                  off-by-one. Out of so many items, this is negligible, but
 #'                  can be set explicitly here.
 #'
-#' @return New score (integer)
+#' @return New scores (data frame of 22 scores)
 #' @export
 #'
 #' @importFrom stats predict
+#'
+#' @examples
+#'
+#' \dontrun{
+#'
+#'   # `wg` must be 22 categories exactly, just two are shown here.
+#'
+#'   wg <- tribble(
+#'     ~category, ~n,
+#'     "action_words", 53,
+#'     "animals", 35
+#'   )
+#'
+#'   ws <- wg2ws_category_score(wg, age = 17)
+#'
+#' }
 
 wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
                                  verbose = FALSE) {
@@ -98,12 +124,12 @@ wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
   twords <- wg_table$n[wg_table$category == "time_words"]
   toys <- wg_table$n[wg_table$category == "toys"]
 
-  cw_new_data = data.frame(age_c = age_c, WG_total = WG_total,
-                           action_words = awords, clothing = clothing,
-                           food_drink = fd, games_routines = gr,
-                           locations = loc, pronouns = pron,
-                           quantifiers = quant, question_words = qwords,
-                           sounds = sounds, time_words = twords, toys = toys)
+  cw_new_data <- data.frame(age_c = age_c, WG_total = WG_total,
+                             action_words = awords, clothing = clothing,
+                             food_drink = fd, games_routines = gr,
+                             locations = loc, pronouns = pron,
+                             quantifiers = quant, question_words = qwords,
+                             sounds = sounds, time_words = twords, toys = toys)
 
   # Round and truncate to [0, 6]
 

@@ -1,4 +1,13 @@
-#' wg2ws_items
+#' List of items to category table
+#'
+#' @description
+#' Given a list of items, create a table of category scores
+#'
+#' @details
+#'  Requires a list that exactly matches items as labeled from Wordbank
+#'  (check `g_dict`). Converts to a table of categorys scores, ready for use
+#'  with `wg2ws_category_score()`.
+#'
 #'
 #' @param items List of WG items present for individual.
 #' @param error_on_missing If TRUE, check whether all items are actual WG
@@ -11,6 +20,7 @@
 #' @return A data frame with 22 rows indicating item totals for all WS
 #'  categories. These values are *not* adjusted, and need to be adjusted with
 #'  `wg2ws_category_score()`.
+#'
 #' @export
 #'
 #' @importFrom utils data
@@ -18,14 +28,10 @@
 #'
 #' @examples
 #'
-#' items <- c("woof woof", "candy", "cry", "sheep", "pattycake", "lamp", "hi")
-#' wg2ws_items(items)
+#' words <- c("smile", "old", "chicken (animal)", "breakfast", "snow", "uh oh",
+#'            "please", "bad", "bicycle", "moon")
 #'
-#' #       category n
-#' # 1 action_words 3
-#' # 2      animals 0
-#' # 3   body_parts 0
-#' #              ...
+#' categories <- wg2ws_items(words)
 
 wg2ws_items <- function(items, error_on_missing = TRUE, in_inside = "either") {
 

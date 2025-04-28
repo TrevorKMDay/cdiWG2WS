@@ -7,7 +7,8 @@
 wg2ws_category_score(wg_table, age = NA, WG_total = NA, verbose = FALSE)
 }
 \arguments{
-\item{wg_table}{A 22-row table with the columns \code{category} and \code{n}.}
+\item{wg_table}{A 22-row table with the columns \code{category} and \code{n}. Includes
+Sounds and Connecting Words.}
 
 \item{age}{(Optional). Age in months. If unset, models not including age
 are used}
@@ -20,8 +21,30 @@ can be set explicitly here.}
 \item{verbose}{T/F: Be verbose.}
 }
 \value{
-New score (integer)
+New scores (data frame of 22 scores)
 }
 \description{
-Simulate WS category score from given WG score
+\code{wg2ws_category_score} takes 22 WG scores and simulates WS scores for each
+one.
+}
+\details{
+This function predicts simulated WS scores for each category score
+independently. If an age is not supplied, models not using age are used
+(less accurate than including age).
+}
+\examples{
+
+\dontrun{
+
+  # `wg` must be 22 categories exactly, just two are shown here.
+
+  wg <- tribble(
+    ~category, ~n,
+    "action_words", 53,
+    "animals", 35
+  )
+
+  ws <- wg2ws_category_score(wg, age = 17)
+
+}
 }

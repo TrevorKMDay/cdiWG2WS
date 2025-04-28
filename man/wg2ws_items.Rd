@@ -2,7 +2,7 @@
 % Please edit documentation in R/wg2ws_items.R
 \name{wg2ws_items}
 \alias{wg2ws_items}
-\title{wg2ws_items}
+\title{List of items to category table}
 \usage{
 wg2ws_items(items, error_on_missing = TRUE, in_inside = "either")
 }
@@ -23,16 +23,17 @@ categories. These values are \emph{not} adjusted, and need to be adjusted with
 \code{wg2ws_category_score()}.
 }
 \description{
-wg2ws_items
+Given a list of items, create a table of category scores
+}
+\details{
+Requires a list that exactly matches items as labeled from Wordbank
+(check \code{g_dict}). Converts to a table of categorys scores, ready for use
+with \code{wg2ws_category_score()}.
 }
 \examples{
 
-items <- c("woof woof", "candy", "cry", "sheep", "pattycake", "lamp", "hi")
-wg2ws_items(items)
+words <- c("smile", "old", "chicken (animal)", "breakfast", "snow", "uh oh",
+           "please", "bad", "bicycle", "moon")
 
-#       category n
-# 1 action_words 3
-# 2      animals 0
-# 3   body_parts 0
-#              ...
+categories <- wg2ws_items(words)
 }
