@@ -16,10 +16,9 @@ List of items
 List instrument items
 }
 \details{
-Simply list the items from each instrument for convenience#'
+Simply list the items from each instrument for convenience.
 }
 \examples{
-
 wg2ws_list_items("WG")
 wg2ws_list_items("WS")
 }

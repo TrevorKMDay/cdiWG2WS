@@ -12,14 +12,12 @@
 #' @return Adjusted score, rounded to the nearest integer. Does not return
 #'  values below 0 or greater than 680.
 #'
-#' @importFrom usethis use_data_raw
-#'
 #' @export
 #'
 #' @examples
 #'
 #' wg2ws_total_age(200)
-#' wg2ws_total_age(200, age = 17)
+#' wg2ws_total_age(200, age = 21)
 #'
 
 wg2ws_total_age <- function(WG, age = NA) {
@@ -31,10 +29,8 @@ wg2ws_total_age <- function(WG, age = NA) {
     newdata$age_c <- age - 18
 
     if (is.na(age)) {
-      use_data_raw("total_WG_to_WS_noage_stripped")
       y_hat <- predict(total_WG_to_WS_noage_stripped, newdata)
     }  else {
-      use_data_raw("total_WG_to_WS_stripped")
       y_hat <- predict(total_WG_to_WS_stripped, newdata)
     }
 

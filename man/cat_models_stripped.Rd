@@ -3,15 +3,25 @@
 \docType{data}
 \name{cat_models_stripped}
 \alias{cat_models_stripped}
-\title{WG to WS categories models}
+\title{Predict category scores}
+\format{
+An object of many linear models.
+
+Linear models predicting WS category scores from WG score and age.
+}
+\source{
+\url{https://wordbank.stanford.edu/}
+}
+\usage{
+cat_models_stripped
+}
 \description{
-Object containing multiple models to predict category scores. The data has
-been stripped from the model.
+Predict category scores
 }
 \references{
 Frank, M. C., Braginsky, M., Yurovsky, D., & Marchman, V. A. (2017).
 Wordbank: An open repository for developmental vocabulary data.
-\emph{Journal of Child Language}, 44(3), 677–694.
-https://doi.org/10.1017/S0305000916000209
+\emph{Journal of Child Language}, 44(3), 677-694.
+\doi{10.1017/S0305000916000209}
 }
-\keyword{model}
+\keyword{datasets}

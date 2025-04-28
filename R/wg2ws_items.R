@@ -5,13 +5,13 @@
 #'
 #' @details
 #'  Requires a list that exactly matches items as labeled from Wordbank
-#'  (check `g_dict`). Converts to a table of categorys scores, ready for use
-#'  with `wg2ws_category_score()`.
+#'  (check [g_dict]). Converts to a table of category scores, ready for use
+#'  with [wg2ws_category_score()].
 #'
 #'
 #' @param items List of WG items present for individual.
 #' @param error_on_missing If TRUE, check whether all items are actual WG
-#'  items. See helper function `wg2ws_list_items()`.
+#'  items. See helper function [wg2ws_list_items()].
 #' @param in_inside "In" and "inside" appear as two items on WG, but one
 #'  ("inside/in") on WS. If "either," treat "inside/in" as endorsed if either
 #'  appears. For "both", both must be endorsed. For "in" or "inside", treat
@@ -19,29 +19,16 @@
 #'
 #' @return A data frame with 22 rows indicating item totals for all WS
 #'  categories. These values are *not* adjusted, and need to be adjusted with
-#'  `wg2ws_category_score()`.
+#'  [wg2ws_category_score()].
 #'
+#' @example man/examples/wg2ws_items.R
 #' @export
-#'
-#' @importFrom utils data
-#' @importFrom usethis use_data_raw
-#'
-#' @examples
-#'
-#' words <- c("smile", "old", "chicken (animal)", "breakfast", "snow", "uh oh",
-#'            "please", "bad", "bicycle", "moon")
-#'
-#' categories <- wg2ws_items(words)
 
 wg2ws_items <- function(items, error_on_missing = TRUE, in_inside = "either") {
 
   if (!(in_inside %in% c("either", "in", "inside"))) {
     stop("Parameter in_inside must be one of: either, in, inside")
   }
-
-  # Load data
-  use_data_raw("g_dict")
-  use_data_raw("s_dict")
 
   s_dict$category <- as.factor(s_dict$category)
 

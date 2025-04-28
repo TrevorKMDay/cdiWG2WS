@@ -3,15 +3,25 @@
 \docType{data}
 \name{total_WG_to_WS_stripped}
 \alias{total_WG_to_WS_stripped}
-\title{WG to WS model}
+\title{Predict total score (w/ age)}
+\format{
+A linear model
+
+A linear model predicting WS score from WG score and age.
+}
+\source{
+\url{https://wordbank.stanford.edu/}
+}
+\usage{
+total_WG_to_WS_stripped
+}
 \description{
-A model that predicts a total WS score from a WG score, given an age
-(months). The data has been stripped from the model.
+Predict total score (w/ age)
 }
 \references{
 Frank, M. C., Braginsky, M., Yurovsky, D., & Marchman, V. A. (2017).
 Wordbank: An open repository for developmental vocabulary data.
-\emph{Journal of Child Language}, 44(3), 677–694.
-https://doi.org/10.1017/S0305000916000209
+\emph{Journal of Child Language}, 44(3), 677-694.
+\doi{10.1017/S0305000916000209}
 }
-\keyword{model}
+\keyword{datasets}

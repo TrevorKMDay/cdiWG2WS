@@ -1,8 +1,7 @@
 #' Simulate WS category score from given WG score
 #'
 #' @description
-#' `wg2ws_category_score` takes 22 WG scores and simulates WS scores for each
-#'  one.
+#' Take 22 WG scores and simulates WS scores for each one.
 #'
 #' @details
 #'  This function predicts simulated WS scores for each category score

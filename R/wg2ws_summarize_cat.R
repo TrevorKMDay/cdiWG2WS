@@ -13,7 +13,7 @@
 #' @references
 #'  Day, T. K. M., & Elison, J. T. (2021). A broadened estimate of syntactic
 #'  and lexical ability from the MB-CDI. \emph{Journal of Child Language},
-#'  49(3), 615–632. https://doi.org/10.1017/S0305000921000283
+#'  49(3), 615-632. \doi{10.1017/S0305000921000283}
 #'
 #' @examples
 #'

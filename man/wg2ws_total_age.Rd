@@ -26,6 +26,6 @@ score.
 \examples{
 
 wg2ws_total_age(200)
-wg2ws_total_age(200, age = 17)
+wg2ws_total_age(200, age = 21)
 
 }

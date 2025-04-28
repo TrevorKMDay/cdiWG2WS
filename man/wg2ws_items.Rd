@@ -10,7 +10,7 @@ wg2ws_items(items, error_on_missing = TRUE, in_inside = "either")
 \item{items}{List of WG items present for individual.}
 
 \item{error_on_missing}{If TRUE, check whether all items are actual WG
-items. See helper function \code{wg2ws_list_items()}.}
+items. See helper function \code{\link[=wg2ws_list_items]{wg2ws_list_items()}}.}
 
 \item{in_inside}{"In" and "inside" appear as two items on WG, but one
 ("inside/in") on WS. If "either," treat "inside/in" as endorsed if either
@@ -20,20 +20,20 @@ appears. For "both", both must be endorsed. For "in" or "inside", treat
 \value{
 A data frame with 22 rows indicating item totals for all WS
 categories. These values are \emph{not} adjusted, and need to be adjusted with
-\code{wg2ws_category_score()}.
+\code{\link[=wg2ws_category_score]{wg2ws_category_score()}}.
 }
 \description{
 Given a list of items, create a table of category scores
 }
 \details{
 Requires a list that exactly matches items as labeled from Wordbank
-(check \code{g_dict}). Converts to a table of categorys scores, ready for use
-with \code{wg2ws_category_score()}.
+(check \link{g_dict}). Converts to a table of category scores, ready for use
+with \code{\link[=wg2ws_category_score]{wg2ws_category_score()}}.
 }
 \examples{
-
+# Create list of words a child knows
 words <- c("smile", "old", "chicken (animal)", "breakfast", "snow", "uh oh",
            "please", "bad", "bicycle", "moon")
-
+# Create table
 categories <- wg2ws_items(words)
 }

@@ -24,8 +24,7 @@ can be set explicitly here.}
 New scores (data frame of 22 scores)
 }
 \description{
-\code{wg2ws_category_score} takes 22 WG scores and simulates WS scores for each
-one.
+Take 22 WG scores and simulates WS scores for each one.
 }
 \details{
 This function predicts simulated WS scores for each category score
