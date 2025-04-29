@@ -1,6 +1,6 @@
 Package: cdiWG2WS
 Title: Words and Gestures to Words and Sentences Score Conversion
-Version: 0.1.1
+Version: 0.1.2
 Authors@R:
     person(given = c("Trevor", "K.M."), family = "Day",
             email = "trevor.day@georgetown.edu",
