@@ -32,18 +32,13 @@ independently. If an age is not supplied, models not using age are used
 (less accurate than including age).
 }
 \examples{
+# Create list of words a child knows
+words <- c("smile", "old", "chicken (animal)", "breakfast", "snow", "uh oh",
+           "please", "bad", "bicycle", "moon")
 
-\dontrun{
+# Create table
+wg_categories <- wg2ws_items(words)
 
-  # `wg` must be 22 categories exactly, just two are shown here.
-
-  wg <- tribble(
-    ~category, ~n,
-    "action_words", 53,
-    "animals", 35
-  )
-
-  ws <- wg2ws_category_score(wg, age = 17)
-
-}
+# Convert to WS score
+ws_categories <- wg2ws_category_score(wg_categories, age = 20)
 }

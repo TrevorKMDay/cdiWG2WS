@@ -23,21 +23,7 @@
 #'
 #' @importFrom stats predict
 #'
-#' @examples
-#'
-#' \dontrun{
-#'
-#'   # `wg` must be 22 categories exactly, just two are shown here.
-#'
-#'   wg <- tribble(
-#'     ~category, ~n,
-#'     "action_words", 53,
-#'     "animals", 35
-#'   )
-#'
-#'   ws <- wg2ws_category_score(wg, age = 17)
-#'
-#' }
+#' @example man/examples/wg2ws_category_score.R
 
 wg2ws_category_score <- function(wg_table, age = NA, WG_total = NA,
                                  verbose = FALSE) {

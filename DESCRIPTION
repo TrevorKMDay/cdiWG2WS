@@ -6,8 +6,11 @@ Authors@R:
             email = "trevor.day@georgetown.edu",
             role = c("cre", "aut"),
             comment = c(ORCID = "0000-0003-2911-8312"))
-Description: Convert CDI Words and Gestures scores to would-be scores on Words
-    and Sentences, based on modeling from the Stanford Wordbank.
+Description: Convert MacArthur-Bates Communicative Development Inventory
+    Words and Gestures scores to would-be scores on Words
+    and Sentences, based on modeling from the
+    Stanford Wordbank <https://wordbank.stanford.edu/>.
+    See Day et al. (2024) <doi:10.31234/osf.io/rwhcy>.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
