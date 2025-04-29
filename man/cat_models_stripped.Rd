@@ -9,9 +9,6 @@ An object of many linear models.
 
 Linear models predicting WS category scores from WG score and age.
 }
-\source{
-\url{https://wordbank.stanford.edu/}
-}
 \usage{
 cat_models_stripped
 }

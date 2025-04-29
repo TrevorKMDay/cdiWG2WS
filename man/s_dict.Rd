@@ -16,9 +16,6 @@ A data frame with 680 rows and 4 columns:
 
 }
 }
-\source{
-\url{https://wordbank.stanford.edu/}
-}
 \usage{
 s_dict
 }

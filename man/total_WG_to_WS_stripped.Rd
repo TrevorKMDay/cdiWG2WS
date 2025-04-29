@@ -9,9 +9,6 @@ A linear model
 
 A linear model predicting WS score from WG score and age.
 }
-\source{
-\url{https://wordbank.stanford.edu/}
-}
 \usage{
 total_WG_to_WS_stripped
 }

@@ -18,7 +18,6 @@
 #'  \emph{Journal of Child Language}, 44(3), 677-694.
 #'  \doi{10.1017/S0305000916000209}
 #'
-#' @source <https://wordbank.stanford.edu/>
 "g_dict"
 
 #' WS dictionary: items, categories
@@ -41,7 +40,6 @@
 #'  \emph{Journal of Child Language}, 44(3), 677-694.
 #'  \doi{10.1017/S0305000916000209}
 #'
-#' @source <https://wordbank.stanford.edu/>
 "s_dict"
 
 #' Predict total score
@@ -57,7 +55,6 @@
 #'  \emph{Journal of Child Language}, 44(3), 677-694.
 #'  \doi{10.1017/S0305000916000209}
 #'
-#' @source <https://wordbank.stanford.edu/>
 "total_WG_to_WS_noage_stripped"
 
 #' Predict total score (w/ age)
@@ -73,7 +70,6 @@
 #'  \emph{Journal of Child Language}, 44(3), 677-694.
 #'  \doi{10.1017/S0305000916000209}
 #'
-#' @source <https://wordbank.stanford.edu/>
 "total_WG_to_WS_stripped"
 
 #' Predict category scores
@@ -89,5 +85,4 @@
 #'  \emph{Journal of Child Language}, 44(3), 677-694.
 #'  \doi{10.1017/S0305000916000209}
 #'
-#' @source <https://wordbank.stanford.edu/>
 "cat_models_stripped"
