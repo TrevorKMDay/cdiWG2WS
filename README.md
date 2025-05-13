@@ -16,7 +16,10 @@ Project (BCP; Howell et al., 2018), which collected WG scores out of range
 for comparison with studies of intellectual and developmental disabilities.
 
 For more information, see the
-[preprint](https://osf.io/preprints/psyarxiv/rwhcy) (Day et al., 2024).
+[preprint](https://osf.io/preprints/psyarxiv/rwhcy) (Day et al., 2024), which 
+relies in part on the Stanford Wordbank
+
+CRAN package link: https://cran.r-project.org/package=cdiWG2WS
 
 # Functions
 
@@ -194,21 +197,26 @@ and the best available model will be used.
 
 # References
 
- 1. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
-    Pethick, S. J. (1994). "Variability in Early Cognitive Development."
-    *Monographs of the Society for Research in Child Development*, 59(5).
-
- 2. Howell, B. R., ... Elison, J. T. (2018).
-    "The UNC/UMN Baby Connectome Project (BCP): An overview of the study
-    design and protocol development." *NeuroImage*.
-    https://doi.org/10.1016/j.neuroimage.2018.03.049
-
- 3. Day, T. K. M., Borovsky, A., Thal, D., & Elison, J. T. (2024).
-    "The CDI in two longitudinal datasets: Methods and differences across
-    decades." *PsyArXiV*.
+ 7. Day, T. K. M., Borovsky, A., Thal, D., & Elison, J. T. (2024).
+    The CDI in two longitudinal datasets: Methods and differences across
+    decades. *PsyArXiV*.
     https://osf.io/preprints/psyarxiv/rwhcy
 
- 4. Day, T. K. M., & Elison, J. T. (2021).
-    "A broadened estimate of syntactic and lexical ability from the MB-CDI."
+ 8. Day, T. K. M., & Elison, J. T. (2021).
+    A broadened estimate of syntactic and lexical ability from the MB-CDI.
     *Journal of Child Language*, 1–18.
     https://doi.org/10.1017/S0305000921000283
+
+ 1. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
+    Pethick, S. J. (1994). Variability in Early Cognitive Development.
+    *Monographs of the Society for Research in Child Development*, 59(5).
+
+ 2. Frank, M. C., Braginsky, M., Yurovsky, D., & Marchman, V. A. (2017).
+    Wordbank: An open repository for developmental vocabulary data.
+    *Journal of Child Language*, 44(3), 677–694.
+    https://doi.org/10.1017/S0305000916000209
+   
+ 6. Howell, B. R., ... Elison, J. T. (2018).
+    The UNC/UMN Baby Connectome Project (BCP): An overview of the study
+    design and protocol development. *NeuroImage*.
+    https://doi.org/10.1016/j.neuroimage.2018.03.049
