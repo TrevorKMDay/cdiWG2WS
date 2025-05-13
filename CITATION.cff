@@ -1,19 +1,24 @@
 # This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
 
-cff-version: 1.2.0
 title: cdiWG2WS
-version: 0.1.2
-message: Code to simulate CDI WS scores from CDI WG scores.
-type: software
+abstract: "Code to convert CDI WG to WS scores"
 authors:
   - given-names: Trevor
     family-names: Day
     email: trevor.day@georgetown.edu
     affiliation: Georgetown University
     orcid: 'https://orcid.org/0000-0003-2911-8312'
+version: 0.1.2
+type: software
 identifiers:
   - type: doi
     value: 10.31234/osf.io/rwhcy
     description: 'Day et al. (2024) [preprint]'
-license: CC-BY-4.0
+message: "If you use this software, please cite the preprint."
+repository-code: https://github.com/TrevorKMDay/cdiWG2WS/
+keywords:
+  - "Communicative Development Inventories"
+  - "word learning"
+license: GPL-3.0
+cff-version: 1.2.0
