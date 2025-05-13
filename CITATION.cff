@@ -3,6 +3,7 @@
 
 cff-version: 1.2.0
 title: cdiWG2WS
+version: 0.1.2
 message: Code to simulate CDI WS scores from CDI WG scores.
 type: software
 authors:
