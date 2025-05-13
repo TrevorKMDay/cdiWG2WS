@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-![Static Badge](https://img.shields.io/badge/version-0.1.0-blue)
+![Static Badge](https://img.shields.io/badge/version-0.1.2-blue)
 <!-- badges: end -->
 
 The function of this R package is to provide function for converting
