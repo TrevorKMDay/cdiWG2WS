@@ -19,7 +19,9 @@ For more information, see the
 [preprint](https://osf.io/preprints/psyarxiv/rwhcy) (Day et al., 2024), which 
 relies in part on the Stanford Wordbank (Frank et al., 2017).
 
-CRAN package link: https://cran.r-project.org/package=cdiWG2WS
+## Citation
+
+CRAN package link: https://cran.r-project.org/package=cdiWG2WS.
 
 # Functions
 
