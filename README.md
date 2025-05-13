@@ -1,7 +1,7 @@
 # cdiWG2WS
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 ![Static Badge](https://img.shields.io/badge/version-0.1.2-blue)
 ![GPL 3.0](https://img.shields.io/badge/license-GPLv3-blue)
 <!-- badges: end -->
@@ -197,26 +197,26 @@ and the best available model will be used.
 
 # References
 
- 7. Day, T. K. M., Borovsky, A., Thal, D., & Elison, J. T. (2024).
+ 1. Day, T. K. M., Borovsky, A., Thal, D., & Elison, J. T. (2024).
     The CDI in two longitudinal datasets: Methods and differences across
     decades. *PsyArXiV*.
     https://osf.io/preprints/psyarxiv/rwhcy
 
- 8. Day, T. K. M., & Elison, J. T. (2021).
+ 2. Day, T. K. M., & Elison, J. T. (2021).
     A broadened estimate of syntactic and lexical ability from the MB-CDI.
     *Journal of Child Language*, 1–18.
     https://doi.org/10.1017/S0305000921000283
 
- 1. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
+ 3. Fenson, L., Dale, P. S., Reznick, J. S., Bates, E., Thal, D. J., &
     Pethick, S. J. (1994). Variability in Early Cognitive Development.
     *Monographs of the Society for Research in Child Development*, 59(5).
 
- 2. Frank, M. C., Braginsky, M., Yurovsky, D., & Marchman, V. A. (2017).
+ 4. Frank, M. C., Braginsky, M., Yurovsky, D., & Marchman, V. A. (2017).
     Wordbank: An open repository for developmental vocabulary data.
     *Journal of Child Language*, 44(3), 677–694.
     https://doi.org/10.1017/S0305000916000209
    
- 6. Howell, B. R., ... Elison, J. T. (2018).
+ 5. Howell, B. R., ... Elison, J. T. (2018).
     The UNC/UMN Baby Connectome Project (BCP): An overview of the study
     design and protocol development. *NeuroImage*.
     https://doi.org/10.1016/j.neuroimage.2018.03.049
